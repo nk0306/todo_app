@@ -4,7 +4,7 @@ class CreateTodos < ActiveRecord::Migration[5.2]
       t.string :content
       t.references :gold, foreign_key: true
       t.integer :position
-      t.boolean :done, null: false
+      t.boolean :done, null: false,default: false
 
       t.timestamps
     end
