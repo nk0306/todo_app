@@ -12,26 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.text_area :content, rows: 4  %>
   </div>
 
-  <div class="field">
-    <%= form.label :gold_id %>
-    <%= form.text_field :gold_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :position %>
-    <%= form.number_field :position %>
-  </div>
-
-  <div class="field">
-    <%= form.label :done %>
-    <%= form.check_box :done %>
-  </div>
-
-  <div class="actions">
+  <div class="actions text-right">
+     <%= link_to "Close", new_goal_todo_path(goal), class: "btn btn-secondary", remote: true %>
     <%= form.submit %>
   </div>
 <% end %>
