@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_01_06_144704) do
     t.string "content"
     t.integer "gold_id"
     t.integer "position"
-    t.boolean "done", null: false
+    t.boolean "done", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["gold_id"], name: "index_todos_on_gold_id"
