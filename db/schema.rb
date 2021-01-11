@@ -39,12 +39,12 @@ ActiveRecord::Schema.define(version: 2021_01_06_144704) do
 
   create_table "todos", force: :cascade do |t|
     t.string "content"
-    t.integer "gold_id"
+    t.integer "goal_id"
     t.integer "position"
     t.boolean "done", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["gold_id"], name: "index_todos_on_gold_id"
+    t.index ["goal_id"], name: "index_todos_on_goal_id"
   end
 
   create_table "users", force: :cascade do |t|
